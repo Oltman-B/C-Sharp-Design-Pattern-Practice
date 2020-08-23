@@ -13,6 +13,11 @@ namespace Observer_Pattern_Practice
             var currentDisplay = new CurrentConditionDisplay(weatherData);
 
             weatherData.SetMeasurements(33.4f, 44f,33.2f);
+
+            // Example of composition, types can be added and removed at run-time.
+            weatherData.RemoveObserver(currentDisplay);
+
+            weatherData.SetMeasurements(99.4f, 22.3f, 12.3f);
         }
     }
 }
